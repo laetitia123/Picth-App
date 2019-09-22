@@ -1,9 +1,5 @@
 
-# from flask import render_template,request,redirect,url_for
 from . import main
-# s
-# from ..forms import PitchForm
-
 from flask_login import login_required
 from flask import render_template,request,redirect,url_for,abort
 from ..models import Pitch, User,Comment,Upvote,Downvote
@@ -68,56 +64,23 @@ def index():
     '''
     pitch = Pitch.query.filter_by().first()
     title = 'welcome to Pitch '
-    Love_Pitch = Pitch.query.filter_by(category="Love_Pitch")
-    Job_Pitch= Pitch.query.filter_by(category = "Job_Pitch")
-    Promotion_Pitch= Pitch.query.filter_by(category = "Promotion_Pitch")
-    Motivational_Pitch = Pitch.query.filter_by(category = "Motivational_Pitch")
+    Interview = Pitch.query.filter_by(category="Interview")
+    Business= Pitch.query.filter_by(category = "Business")
+    Promotion= Pitch.query.filter_by(category = "Promotion")
+    Product= Pitch.query.filter_by(category = "Product")
+   
 
     upvotes = Upvote.get_all_upvotes(pitch_id=Pitch.id)
     
 
-    return render_template('index2.html', title = title, pitch = pitch, Love_Pitch=Love_Pitch, Job_Pitch=Job_Pitch, Promotion_Pitch = Promotion_Pitch, Motivational_Pitch= Motivational_Pitch,upvotes=upvotes)
+    return render_template('index2.html', title = title, Interview=Interview, Business=Business,  Promotion = Promotion, Product= Product,upvotes=upvotes)
     
-
-
-
-
-
-
-@main.route('/movie/<int:id>')
-def movie(id):
-
-    '''
-    View movie page function that returns the movie details page and its data
-    '''
-    movie = get_movie(id)
-    title = f'{movie.title}'
-    reviews = Review.get_reviews(movie.id)
-
-    return render_template('movie.html',title = title,movie = movie,reviews = reviews)
-
-
-
-@main.route('/search/<movie_name>')
-def search(movie_name):
-    '''
-    View function to display the search results
-    '''
-    movie_name_list = movie_name.split(" ")
-    movie_name_format = "+".join(movie_name_list)
-    searched_movies = search_movie(movie_name_format)
-    title = f'search results for {movie_name}'
-    return render_template('search.html',movies = searched_movies)
-
-
-
-
 
 @main.route('/pitch/new/', methods = ['GET','POST'])
 @login_required
 def new_pitch():
     form = PitchForm()
-    # my_upvotes = Upvote.query.filter_by(pitch_id = Pitch.id)
+    my_upvotes = Upvote.query.filter_by(pitch_id = Pitch.id)
     if form.validate_on_submit():
         description = form.description.data
         title = form.title.data

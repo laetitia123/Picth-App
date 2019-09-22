@@ -17,6 +17,7 @@ class User(UserMixin,db.Model):
     password_secure = db.Column(db.String(255))
     password_hash = db.Column(db.String(255))
     pass_secure = db.Column(db.String(255))
+    comment = db.relationship('Comment', backref = 'user', lazy = 'dynamic')
     pitches= db.relationship('Pitch',backref = 'user',lazy = "dynamic")
     upvotes = db.relationship('Upvote', backref = 'user', lazy = 'dynamic')
     downvotes = db.relationship('Downvote', backref = 'user', lazy = 'dynamic')

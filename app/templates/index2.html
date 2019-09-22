@@ -39,37 +39,38 @@
       <br>
       <div class="col-ms-10">
       <ul class="nav navbar-nav ">
+         
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#Love_Pitch">Product</a>
+            <a class="nav-link active" data-toggle="tab" href="#Interview">Interview</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#Job_Pitch">Love</a>
+            <a class="nav-link" data-toggle="tab" href="#Business">Business</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#Promotion_Pitch">interview</a>
+            <a class="nav-link" data-toggle="tab" href="#Promotion">Promotion</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#Motivational_Pitch">Promotion</a>
+            <a class="nav-link" data-toggle="tab" href="#Product'">Product</a>
           </li>
         </ul>
       </div>
     </div>
     </div>
       <div >
-        <div id="Love_Pitch" class="container tab-pane active"><br>
-          {{ macro.display(Love_Pitch) }}
+        <div id="Interview" class="container "><br>
+          {{ macro.display(Interview) }}
           
         </div>
-        <div id="Job_Pitch" class="container tab-pane fade"><br>
-          {{ macro.display(Job_Pitch) }}
+        <div id="Business" class="col-sm-10"><br>
+          {{ macro.display(Business) }}
         </div>
-        <div id="Promotion_Pitch" class="container tab-pane fade"><br>
-          {{ macro.display(Promotion_Pitch)}}
+        <div id="Promotion" class="container tab-pane fade"><br>
+          {{ macro.display(Promotion)}}
         </div>
-        <div id="Motivational_Pitch" class="container tab-pane fade"><br>
-          {{ macro.display(Motivational_Pitch) }}
+        <div id="Product" class="container tab-pane fade"><br>
+          {{ macro.display(Product) }}
         </div>
       </div> 
       </div>
-  >
+  
   {% endblock %}
