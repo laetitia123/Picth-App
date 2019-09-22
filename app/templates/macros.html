@@ -4,11 +4,11 @@
 		{% for category in category_list %}
 		<div class="col-md-6">
 			
-			<div class="thumbnail text-center">
+			<div class="text-center">
 			<p>{{category.title}}</p>
 			<p>{{category.category}}</p>
 			
-				<blockquote class="blockquote mb-0">
+				<blockquote >
 					<h2>{{category.description}}</h2>
 					<footer class="blockquote-footer"> Posted by {{category.user.username}}</footer>
 				</blockquote>
