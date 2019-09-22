@@ -3,14 +3,54 @@
 {% block navbar %}
 {% include 'navbar.html'%}
 {% endblock %}
+<!-- Styles block -->
 
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
+{% endblock %}
+<!-- Content block -->
   {% block content %}
+
+
     <div class="container">
-        <p>welcome to pitch app </p>
-      <h3 class="title">Pitch Categories</h3>
+      <div class="row">
+        <div class="col-sm-8">
+          <p style="margin-top:50px;font-family: cursive;font-size:18px;">To many people, the idea of pitching is intimidating. But for you to succeed 
+            in life , having a great pitch is not an option. 
+            A great pitch is concise, convincing and delivered in a self assured manner.
+            <br>
+            In life, you only have 60 seconds to impress someone. 1 minute can make or break you. 
+            How do we make sure that you use your 1 minute to actually say something meaningful?
+            This app will help you to  use that one minute wisely and write your PITCH you can also see the others pitches
+            vote them and comments on their pitches.<br>
+            Enjoy!
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <img src="https://cdn.pixabay.com/photo/2015/11/03/08/57/browse-1019849_960_720.jpg"height="300">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <h3 class="title">Pitch Categories</h3>
       <br>
-      
-      
+      <ul class="nav navbar-nav navbar-right">>
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#Love_Pitch">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Job_Pitch">Interview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Promotion_Pitch">Pickupline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Motivational_Pitch">Promotion</a>
+          </li>
+        </ul>
+      </div>
       <div class="tab-content">
         <div id="Love_Pitch" class="container tab-pane active"><br>
           {{ macro.display(Love_Pitch) }}
