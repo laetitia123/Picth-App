@@ -19,7 +19,7 @@
                      
             
 
-        </div>
+       
          <ul class="nav navbar-nav navbar-right">
         {% if current_user.is_authenticated %}
         <li><a  style="color:orange;" href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
@@ -28,6 +28,7 @@
         <li ><a   style="color:orange;"href="{{url_for('auth.login')}}">Sign in</a></li>
         {%endif%}
       </ul>
+    </div>
        <ul> 
         <h1 style="margin-top:200px;text-align:center; text-transform:capitalize;color:orange;font-size:62px;font-family:'Sacramento', cursive; ">welcome to pitch app </h1>
       </ul>
