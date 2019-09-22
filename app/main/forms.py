@@ -3,14 +3,13 @@ from wtforms import StringField,TextAreaField,SubmitField,RadioField
 from wtforms.validators import Required
 class PitchForm(FlaskForm):
    title = StringField('pitch title',validators=[Required()])
-   description = TextAreaField('pitch description', validators=[Required()])
-    
+   description = TextAreaField('pitch description', validators=[Required()]) 
    category = RadioField('Label', choices=[ (' Love_Pitch',' Love_Pitch'), ('Job_Pitch','job_Pitch'),('Promotion_Pitch','Promotion_Pitch'),('Motivational_Pitch','Motivational_Pitch')],validators=[Required()])
    submit = SubmitField('Submit')
 
 
 class CommentForm(FlaskForm):
-	description = TextAreaField('Add comment',validators=[Required()])
+	description = TextAreaField('comment here',validators=[Required()])
 	submit = SubmitField()
 
 class UpvoteForm(FlaskForm):
