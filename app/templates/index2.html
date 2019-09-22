@@ -1,0 +1,43 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'macros.html' as macro %}
+{% block navbar %}
+{% include 'navbar.html'%}
+{% endblock %}
+
+  {% block content %}
+    <div class="container">
+      <h3 class="title">Pitch Categories</h3>
+      <br>
+      <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#Love_Pitch">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#Job_Pitch">Interview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#Promotion_Pitch">Pickupline</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#Motivational_Pitch">Promotion</a>
+        </li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="Love_Pitch" class="container tab-pane active"><br>
+          {{ macro.display(Love_Pitch) }}
+          
+        </div>
+        <div id="Job_Pitch" class="container tab-pane fade"><br>
+          {{ macro.display(Job_Pitch) }}
+        </div>
+        <div id="Promotion_Pitch" class="container tab-pane fade"><br>
+          {{ macro.display(Promotion_Pitch)}}
+        </div>
+        <div id="Motivational_Pitch" class="container tab-pane fade"><br>
+          {{ macro.display(Motivational_Pitch) }}
+        </div>
+        
+      </div>
+    </div>
+  {% endblock %}
