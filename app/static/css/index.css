@@ -1,9 +1,10 @@
 .title{
-    background-color: black;
+    text-align:center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:24px;
+    background-color:blue;
 }
-.h1{
-  background-color: black; 
-}
+
 .pitch{
     background-color:red;
 }

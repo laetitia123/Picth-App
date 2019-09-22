@@ -34,24 +34,26 @@
       </div>
     </div>
     <div class="container">
-        <h3 class="title">Pitch Categories</h3>
+      <div class="row">
+        <h1 style="text-align:center;font-family: Georgia, 'Times New Roman', Times, serif"> Categories</h1>
       <br>
-      <ul class="nav navbar-nav navbar-right">>
+      <ul class="nav navbar-nav navbar-right">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#Love_Pitch">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#Job_Pitch">Interview</a>
+            <a class="nav-link" data-toggle="tab" href="#Job_Pitch">Love</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#Promotion_Pitch">Pickupline</a>
+            <a class="nav-link" data-toggle="tab" href="#Promotion_Pitch">interview</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#Motivational_Pitch">Promotion</a>
           </li>
         </ul>
       </div>
-      <div class="tab-content">
+    </div>
+      <div >
         <div id="Love_Pitch" class="container tab-pane active"><br>
           {{ macro.display(Love_Pitch) }}
           
@@ -65,7 +67,7 @@
         <div id="Motivational_Pitch" class="container tab-pane fade"><br>
           {{ macro.display(Motivational_Pitch) }}
         </div>
-        
+      </div> 
       </div>
-    </div>
+  >
   {% endblock %}
