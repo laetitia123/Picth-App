@@ -98,21 +98,20 @@ This is an application that allows a user to create a pitch depending on a certa
      activate virtual: source virtual/bin/activate
 
 ## Dependencies
- *alembic
- *Flask
- *Flask-Bootstrap
- *Flask-Login
- *Flask-Mail
- *Flask-Migrate
- *Flask-Script=
- *Flask-SQLAlchemy
- *Flask-Uploads
- *Flask-WTF
- *itsdangerous
- *jinja2
- *psycopg2
- *SQLAlchemy==1.2.8
- *WTForms==2.2.1
+     alembic
+     Flask
+     Flask-Bootstrap
+     Flask-Login
+     Flask-Mail
+     Flask-Migrate
+     Flask-Script=
+     Flask-SQLAlchemy
+     Flask-Uploads
+     Flask-WTF
+     jinja2
+     psycopg2
+     SQLAlchemy==1.2.8
+     WTForms==2.2.1
 
 ## Support and contact details
 Any contribution or support please contact me on my email:uwizelaetitia@gmail.com
