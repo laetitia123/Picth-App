@@ -2,8 +2,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,TextAreaField,SubmitField,RadioField
 from wtforms.validators import Required
 class PitchForm(FlaskForm):
-   title = StringField('pitch title',validators=[Required()])
-   description = TextAreaField('pitch description', validators=[Required()]) 
+   Title = StringField('Pitch Title',validators=[Required()])
+   description = TextAreaField('Pitch Description', validators=[Required()]) 
    category = RadioField('Label', choices=[ ('Interview','Interview'), ('Business','Business'),('Promotion','Promotion'),('Product','Product')],validators=[Required()])
    submit = SubmitField('Submit')
 
