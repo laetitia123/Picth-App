@@ -16,8 +16,8 @@
 				
 				<a href="{{url_for('main.new_comment',pitch_id = category.id)}}" class="btn btn-dark"> Add a comment</a>
 				
-				<a href="{{url_for('main.upvote',pitch_id = category.id)}}" class= "btn btn-success btn-sm"><i></i>Upvote <span>{{category.upvotes.count()}}</span></a>
-				<a href="{{url_for('main.downvote',pitch_id = category.id)}}" class= "btn btn-danger btn-sm"><i class="far fa-thumbs-up"></i>Downvote <span>{{category.downvotes.count()}}</span></a>
+				<a href="{{url_for('main.upvote',pitch_id = category.id)}}" class="btn btn-warning"><i></i>Upvote <span>{{category.upvotes.count()}}</span></a>
+				<a href="{{url_for('main.downvote',pitch_id = category.id)}}" class= "btn btn-danger "><i class="far fa-thumbs-up"></i>Downvote <span>{{category.downvotes.count()}}</span></a>
 
 
 			
